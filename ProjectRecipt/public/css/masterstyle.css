@@ -1,0 +1,63 @@
+.row.content {height: 642px;}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #000;
+
+    color: white;
+    padding: 15px;
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
+}
+p.left-pane{
+    background-color: #000;
+    margin: 0em 0 1px 0;
+    padding: 15px 0px 15px 0px;
+}
+p.left-pane:hover{
+    background-color: #3d3d37;
+}
+.right-container{
+    height: 100%;
+    background-color: #fff;
+}
+input[type=text] {
+    width: 215px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 7px 20px 7px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 80%;
+}
+.form1{
+    margin-top: 1em;
+}
+ul .pagination>li:active{
+    background-color: #000;
+}
+.pagination > li{background-color: #000;}
+p{
+    margin: 0px;
+}
+td p{
+    color: #000;
+}
