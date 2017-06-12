@@ -6,7 +6,9 @@
 
     {{--pagetitle starts here--}}
     <div class="row text-center">
-        <div class="col-sm-12"><h2>All Invoices</h2></div>
+        <div class="col-sm-12"><h2> All Invoices   @foreach($vendor as $vendors)
+                    {{ $vendors->name }}
+                @endforeach  </h2></div>
     </div>
     {{--pagetitle ends here--}}
 

@@ -21,6 +21,14 @@ class CreateTblItemsTable extends Migration
 
             $table->timestamps();
         });
+
+        Schema::create('tbl_items_tbl_reciepts', function (Blueprint $table) {
+
+            $table->integer('tbl_items_id');
+            $table->integer('tbl_reciepts_id');
+            $table->primary('tbl_items_id','tbl_reciepts_id');
+
+        });
     }
 
     /**
@@ -31,5 +39,6 @@ class CreateTblItemsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('tbl_items');
+        Schema::dropIfExists('tbl_reciepts');
     }
 }
