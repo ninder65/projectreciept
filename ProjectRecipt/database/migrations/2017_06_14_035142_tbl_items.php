@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblItemsTable extends Migration
+class TblItems extends Migration
 {
     /**
      * Run the migrations.
@@ -13,24 +13,22 @@ class CreateTblItemsTable extends Migration
      */
     public function up()
     {
+        //
         Schema::create('tbl_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',100);
-            $table->string('quantity',10);
-            $table->float('total',8,2);
+            $table->string('iname',100);
+            $table->string('iquantity',10);
+            $table->float('itotal',8,2);
+            $table->integer('reciept_id')->unsigned();
+            $table->foreign('reciept_id')->references('id')->on('tbl_reciepts');
+            $table->integer('categories_id')->unsigned();
+            $table->foreign('categories_id')->references('id')->on('tbl_categories');
 
-            $table->timestamps();
-        });
 
-        Schema::create('tbl_items_tbl_reciepts', function (Blueprint $table) {
-
-            $table->integer('tbl_items_id');
-            $table->integer('tbl_reciepts_id');
-            $table->primary('tbl_items_id','tbl_reciepts_id');
+//            $table->timestamps();
 
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -39,6 +37,6 @@ class CreateTblItemsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('tbl_items');
-        Schema::dropIfExists('tbl_reciepts');
+        //
     }
 }

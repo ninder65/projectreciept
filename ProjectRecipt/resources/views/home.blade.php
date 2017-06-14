@@ -6,9 +6,7 @@
 
     {{--pagetitle starts here--}}
     <div class="row text-center">
-        <div class="col-sm-12"><h2> All Invoices   @foreach($vendor as $vendors)
-                    {{ $vendors->name }}
-                @endforeach  </h2></div>
+        <div class="col-sm-12"><h2> All Invoices  </h2></div>
     </div>
     {{--pagetitle ends here--}}
 
@@ -40,51 +38,46 @@
                     <th>Total</th>
                     <th>Edit</th>
                     <th>Delete</th>
+
+
                 </tr>
                 </thead>
                 <tbody>
+
+                @foreach($recieptdatas as $recieptdata)
+{{--                    {{ dd($recieptdata) }}--}}
+
+
+
                 <tr>
-                    <td>Wallmart</td>
-                    <td>5-May-2017</td>
-                    <td>Grocery</td>
-                    <td>$4.59</td>
+                    <td> {{$recieptdata->vname}}</td>
+                    <td> {{$recieptdata->date}}</td>
+                    <td> {{$recieptdata->cname}}</td>
+                    <td> {{$recieptdata->items_total_cost}}</td>
                     <td><a href="#"><p class="glyphicon glyphicon-pencil"></p></a></td>
                     <td><a href="#"><p class="glyphicon glyphicon-trash"></p></a></td>
                 </tr>
-                <tr>
-                    <td>Canadian Type</td>
-                    <td>4-May-2017</td>
-                    <td>Home appliances</td>
-                    <td>$13.99</td>
-                    <td><a href="#"><p class="glyphicon glyphicon-pencil"></p></a></td>
-                    <td><a href="#"><p class="glyphicon glyphicon-trash"></p></a></td>
-                </tr>
-                <tr>
-                    <td>Sarabjeet Motors</td>
-                    <td>3-May-2017</td>
-                    <td>Car</td>
-                    <td>$12.89</td>
-                    <td><a href="#"><p class="glyphicon glyphicon-pencil"></p></a></td>
-                    <td><a href="#"><p class="glyphicon glyphicon-trash"></p></a></td>
-                </tr>
-                </tbody>
+                @endforeach
+
+
+                                   </tbody>
             </table>
         </div>
     </div>
     {{--table ends here--}}
 
     {{--pagination starts--}}
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <ul class="pagination pagination-default">
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-            </ul>
-        </div>
-    </div>
+    {{--<div class="row">--}}
+        {{--<div class="col-sm-12 text-center">--}}
+            {{--<ul class="pagination pagination-default">--}}
+                {{--<li class="active"><a href="#">1</a></li>--}}
+                {{--<li><a href="#">2</a></li>--}}
+                {{--<li><a href="#">3</a></li>--}}
+                {{--<li><a href="#">4</a></li>--}}
+                {{--<li><a href="#">5</a></li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     {{--pagination ends--}}
 
 

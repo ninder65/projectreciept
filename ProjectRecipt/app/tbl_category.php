@@ -10,7 +10,7 @@ class tbl_category extends Model
     protected $table = 'tbl_categories';
     protected $primaryKey = 'id';
     public $timestamps = false;
-    protected $fillable = ['name','datetime'];
+    protected $fillable = ['cname','datetime'];
 
 
 }

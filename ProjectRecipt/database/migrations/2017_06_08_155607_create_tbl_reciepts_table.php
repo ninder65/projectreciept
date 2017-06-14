@@ -17,16 +17,16 @@ class CreateTblRecieptsTable extends Migration
             $table->increments('id');
             $table->integer('vendor_id')->unsigned();
             $table->foreign('vendor_id')->references('id')->on('tbl_vendors');
-            $table->integer('item_id')->unsigned();
-            $table->foreign('item_id')->references('id')->on('tbl_items');
-            $table->integer('categories_id')->unsigned();
-            $table->foreign('categories_id')->references('id')->on('tbl_categories');
+//            $table->integer('item_id')->unsigned();
+//            $table->foreign('item_id')->references('id')->on('tbl_items');
+//            $table->integer('categories_id')->unsigned();
+//            $table->foreign('categories_id')->references('id')->on('tbl_categories');
             $table->float('items_total_cost');
             $table->dateTime('date');
             $table->string('pic');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->timestamps();
+//            $table->timestamps();
         });
     }
 

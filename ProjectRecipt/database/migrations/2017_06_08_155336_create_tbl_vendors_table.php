@@ -15,8 +15,8 @@ class CreateTblVendorsTable extends Migration
     {
         Schema::create('tbl_vendors', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',100);
-            $table->timestamps();
+            $table->string('vname',100);
+//            $table->timestamps();
         });
     }
 
