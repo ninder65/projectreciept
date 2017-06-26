@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Reciepts;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -25,12 +26,8 @@ class HomeController extends Controller
     {
    // $tbl_vendor = tbl_category::all();
 
-        $recieptdata = DB::table('tbl_reciepts')
-            ->join('tbl_items', 'tbl_reciepts.id', '=', 'tbl_items.reciept_id')
-            ->join('tbl_categories', 'tbl_items.categories_id', '=', 'tbl_categories.id')
-            ->join('tbl_vendors', 'tbl_reciepts.vendor_id', '=', 'tbl_vendors.id')
-            ->select('tbl_reciepts.*','tbl_categories.cname', 'tbl_items.iname','tbl_vendors.vname')
-            ->get();
+        $recieptdata = Reciepts::all();
+
 
 
         return view('home')->with("recieptdatas", $recieptdata);

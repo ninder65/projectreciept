@@ -115,9 +115,9 @@
         {{--container ends--}}
 
         {{--footer starts--}}
-        <footer class="text-center">
-            <p>Copyright &copy;2017</p>
-        </footer>
+        {{--<footer class="text-center">--}}
+            {{--<p>Copyright &copy;2017</p>--}}
+        {{--</footer>--}}
         {{--footer ends--}}
 
         <script>

@@ -19,3 +19,31 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/addinvoice', 'RecieptsController@index');
+
+Route::post('/addinvoice', 'RecieptsController@store');
+
+Route::get('/detail/{id}', 'RecieptsController@show');
+
+Route::get('/edit/{id}' , 'RecieptsController@edit');
+
+Route::post('/edit/{id}' , 'RecieptsController@update');
+
+Route::get('/del/{id}' , 'RecieptsController@destroy');
+
+//Route::post('/detail', 'RecieptsController@store');
+
+
+
+
+
+
+//
+//Route::get('/detail', function () {
+//    return view('detail');
+//});
+//
+//Route::get('/edit', function () {
+//    return view('edit');
+//});
+

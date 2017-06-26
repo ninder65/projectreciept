@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+{{--{{dd($recieptdatas)}}--}}
 
     {{--pagetitle starts here--}}
     <div class="row text-center">
@@ -33,8 +33,8 @@
                 <thead>
                 <tr>
                     <th>Vendor</th>
+                    <th>Reciept Name</th>
                     <th>Date</th>
-                    <th>Category</th>
                     <th>Total</th>
                     <th>Edit</th>
                     <th>Delete</th>
@@ -50,12 +50,12 @@
 
 
                 <tr>
-                    <td> {{$recieptdata->vname}}</td>
+                    <td><a href="{{ url('/detail', $recieptdata->id) }}">{{$recieptdata->vendor_name}}</a> </td>
+                    <td> {{$recieptdata->reciept_name}}</td>
                     <td> {{$recieptdata->date}}</td>
-                    <td> {{$recieptdata->cname}}</td>
-                    <td> {{$recieptdata->items_total_cost}}</td>
-                    <td><a href="#"><p class="glyphicon glyphicon-pencil"></p></a></td>
-                    <td><a href="#"><p class="glyphicon glyphicon-trash"></p></a></td>
+                    <td> {{$recieptdata->reciept_total}}</td>
+                    <td><a href="{{ url('/edit', $recieptdata->id) }}"><p class="glyphicon glyphicon-pencil"></p></a></td>
+                    <td><a href="{{ url('/del', $recieptdata->id) }}"><p class="glyphicon glyphicon-trash"></p></a></td>
                 </tr>
                 @endforeach
 
